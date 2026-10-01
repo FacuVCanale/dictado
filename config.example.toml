@@ -1,0 +1,10 @@
+# Copy to ~/.config/dictado/config.toml. Every key is optional; command-line flags override it.
+engine = "parakeet"                 # parakeet | whisper
+# model = "mlx-community/parakeet-tdt-0.6b-v3"   # parakeet: HF id or folder; whisper: tiny..large-v3, HF id or folder
+lang = "es"                         # whisper only (parakeet detects the language)
+hotkey = "ctrl+alt+space"
+compute_type = "int8"               # whisper
+device = "cpu"                      # whisper (CTranslate2 has no Metal backend)
+min_seconds = 0.3                   # shorter recordings are dropped
+position = "top-right"              # overlay: top-right | top-left | bottom-right | bottom-left | cursor
+# input_device = "USB"              # preferred input (name substring or index) when connected
